@@ -1,3 +1,3 @@
 # fastapiapp
 
-## creating fastapi applicationgit 
+## creating fastapi application
