@@ -3,19 +3,21 @@ from typing import Optional
 from .job import JobResponse
 
 class CompanyBase(BaseModel):
-    name: str
-    email: str
-    phone: str 
-    location: str
+    name: Optional [str] = None
+    email: Optional [str] = None
+    phone: Optional [str] = None
+    location: Optional [str] = None
+   
 
 class CompanyCreate(CompanyBase):
-    pass
+    name:str
+    email:str
+    phone:str
+    location:str
+    
 
-class CompanyUpdate(BaseModel):
-   name: Optional [str] = None
-   email: Optional [str] = None
-   phone: Optional [str] = None
-   location: Optional [str] = None
+class CompanyUpdate(CompanyBase):
+    pass
 
 class CompanyResponse(CompanyBase):
     id:int
